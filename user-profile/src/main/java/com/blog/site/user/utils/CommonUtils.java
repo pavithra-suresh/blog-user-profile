@@ -5,9 +5,11 @@ import java.util.regex.Pattern;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.context.annotation.Configuration;
 
 import com.blog.site.user.model.User;
 
+@Configuration
 public class CommonUtils {
 	
 	private static Logger logger = LogManager.getLogger(CommonUtils.class);
