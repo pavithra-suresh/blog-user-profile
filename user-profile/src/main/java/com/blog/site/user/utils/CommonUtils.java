@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.Configuration;
 
-import com.blog.site.user.model.User;
+import com.blog.site.user.model.UserDto;
 
 @Configuration
 public class CommonUtils {
@@ -19,7 +19,7 @@ public class CommonUtils {
 	 * @param user
 	 * @return
 	 */
-	public boolean validateUser(User user) {
+	public boolean validateUser(UserDto user) {
 		return isValidEmail(user.getEmail()) && 
 				isValidPassword(user.getPassword());
 	}

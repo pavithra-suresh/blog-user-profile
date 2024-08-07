@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.blog.site.user.model.User;
+import com.blog.site.user.model.UserDto;
 import com.blog.site.user.service.IUserService;
 
 import io.swagger.annotations.ApiOperation;
@@ -28,7 +28,7 @@ public class UserController {
 	 */
 	@PostMapping("/register")
 	@ApiOperation(notes="Creates a user with provided details", value = "Register a new user")
-	public boolean register(@RequestBody User user) {
+	public boolean register(@RequestBody UserDto user) {
 		logger.info("Request received for new user registration : {}", user);
 		
 		return userService.registerUser(user);

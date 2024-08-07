@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserDto {
 
 	@NotEmpty(message = "User name should not be empty")
 	private String userName;

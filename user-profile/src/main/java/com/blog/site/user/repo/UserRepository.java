@@ -1,9 +1,13 @@
 package com.blog.site.user.repo;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.blog.site.user.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends MongoRepository<User, String>{
+import com.blog.site.user.entity.User;
+
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Integer>{
 
 }

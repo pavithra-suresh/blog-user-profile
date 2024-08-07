@@ -1,10 +1,9 @@
 package com.blog.site.user.service;
 
-
-import com.blog.site.user.model.User;
+import com.blog.site.user.model.UserDto;
 
 public interface IUserService {
 
-	boolean registerUser(User user);
+	boolean registerUser(UserDto user);
 
 }
