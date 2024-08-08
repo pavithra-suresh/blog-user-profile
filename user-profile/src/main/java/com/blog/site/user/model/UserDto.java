@@ -1,6 +1,7 @@
 package com.blog.site.user.model;
 
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
 import lombok.AllArgsConstructor;
@@ -16,6 +17,7 @@ public class UserDto {
 	private String userName;
 	
 	@NotEmpty(message = "Email should not be empty")
+	@Email(message = "Email should be valid")
 	private String email;
 	
 	@NotEmpty(message = "Password should not be empty")
