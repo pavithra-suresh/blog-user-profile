@@ -12,6 +12,7 @@ import com.blog.site.user.model.UserDto;
 import com.blog.site.user.service.IUserService;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @RestController
 @RequestMapping("/user")
@@ -27,8 +28,8 @@ public class UserController {
 	 * @return
 	 */
 	@PostMapping("/register")
-	@ApiOperation(notes="Creates a user with provided details", value = "Register a new user")
-	public boolean register(@RequestBody UserDto user) {
+	@ApiOperation(notes = "Creates a user with provided details", value = "Register a new user")
+	public boolean register(@ApiParam(name = "register", value = "New User Details") @RequestBody UserDto user) {
 		logger.info("Request received for new user registration : {}", user);
 		
 		return userService.registerUser(user);
